@@ -49,7 +49,7 @@ public class Principal extends AppCompatActivity
         letreros=GESTION_LETREROS.listadoLetrero();
         ArrayList<EstiloView> estilos=new ArrayList<>();
         for(int i=0; i<letreros.size();i++){
-            EstiloView lista=new EstiloView(letreros.get(i).getRuta().getNombre_ruta(),letreros.get(i).getDescripcion());
+            EstiloView lista=new EstiloView(letreros.get(i).getRuta().getNombre_ruta(), letreros.get(i).getDescripcion(), letreros.get(i).getHorario_inicial(), letreros.get(i).getHorario_final(),letreros.get(i).getRuta().getLocalidad());
             estilos.add(lista);
             AdapterEstiloView adapter=new AdapterEstiloView(this,estilos);
             view.setAdapter(adapter);

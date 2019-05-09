@@ -69,9 +69,9 @@ public class AdapterEstiloView extends BaseAdapter {
         TextView description = (TextView) v.findViewById(R.id.descripcion);
         description.setText(dir.getDescription());
         TextView horarioInicial = (TextView) v.findViewById(R.id.Fecha_inicial);
-
-        TextView horarioFinal = (TextView) v.findViewById(R.id.Fecha_inicial);
-
+        horarioInicial.setText(dir.getHorario_inicio());
+        TextView horarioFinal = (TextView) v.findViewById(R.id.Fecha_final);
+        horarioFinal.setText(dir.getHorario_final());
         return v;
     }
     }
