@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/coloWhite"
+    >
+
+    <RelativeLayout
+        android:id="@+id/item_estilo"
+        android:layout_width="339dp"
+        android:layout_height="214dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="50dp"
+        android:background="#9AF1BB"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07">
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/coloWhite"
+            android:backgroundTint="#31DD75"
+            android:text="TextView"
+            android:textColor="@color/colorBlack"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/descripcion"
+            android:layout_width="match_parent"
+            android:layout_height="116dp"
+            android:layout_below="@+id/titulo"
+            android:layout_marginTop="2dp"
+            android:text="TextView"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/Fecha_inicial"
+            android:layout_width="126dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descripcion"
+            android:layout_marginTop="4dp"
+            android:text="TextView"
+            android:textColor="@color/colorBlack"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/Fecha_final"
+            android:layout_width="126dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Fecha_inicial"
+            android:layout_marginTop="2dp"
+            android:text="TextView"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/dato_ruta"
+            android:layout_width="155dp"
+            android:layout_height="38dp"
+            android:layout_below="@+id/descripcion"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@+id/Fecha_inicial"
+            android:text="TextView"
+            android:textColor="@color/colorBlack" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
