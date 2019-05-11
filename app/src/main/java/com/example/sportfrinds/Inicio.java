@@ -53,9 +53,17 @@ public class Inicio extends AppCompatActivity {
      */
     public void login(View view){
         usuario=new Usuario(nombreUsuario.getText().toString(),contrasena.getText().toString());
-        if(GESTION_USUARIO.login(usuario)==true){
-            Intent principal = new Intent(getApplicationContext(), Principal.class);
-            startActivity(principal);
+        Usuario usuario1= GESTION_USUARIO.login(usuario);
+       if(usuario1!=null){//controla si el usuario existe.
+           if (usuario1.getTipo().equals("administrador")){//controla si el usuario es administrador
+               Toast.makeText(getApplicationContext(),
+                       "Error al logearse eres un Administrador, debes entrar desde la aplicacion de Escritorio", Toast.LENGTH_SHORT).show();
+           }
+           if (usuario1.getTipo().equals("cliente")){//controla si el usuario es cliente o administrador
+               Intent principal = new Intent(getApplicationContext(), Principal.class);
+               startActivity(principal);
+           }
+
         }else{
             Toast.makeText(getApplicationContext(),
                     "Error al iniciar Sesion la contrasenia o el usuario no es correcto.", Toast.LENGTH_SHORT).show();

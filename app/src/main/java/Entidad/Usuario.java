@@ -18,6 +18,13 @@ public class Usuario {
     public Usuario(){
 
     }
+    public Usuario(String nombreUsuario, String contrasena, String tipo, String dni){
+        this.nombreUsuario=nombreUsuario;
+        this.contrasena=contrasena;
+        this.tipo=tipo;
+        this.dni=dni;
+
+    }
     public Usuario(String nombre, String apellidos,String nombreUsuario,String telefono,String mail,String localidad,String dni,String contrasena,String tipo){
         this.nombre=nombre;
         this.apellidos=apellidos;
