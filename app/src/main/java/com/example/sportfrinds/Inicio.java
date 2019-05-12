@@ -10,13 +10,15 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
+import java.io.Serializable;
+
 import Entidad.Usuario;
 import Gestion.GestionUsuario;
 
 /**
  * @author Prudencio Chaparro González y Carlos García Tello
  */
-public class Inicio extends AppCompatActivity {
+public class Inicio extends AppCompatActivity  {
     /**
      * Atributo;
      */
@@ -60,7 +62,10 @@ public class Inicio extends AppCompatActivity {
                        "Error al logearse eres un Administrador, debes entrar desde la aplicacion de Escritorio", Toast.LENGTH_SHORT).show();
            }
            if (usuario1.getTipo().equals("cliente")){//controla si el usuario es cliente o administrador
+
                Intent principal = new Intent(getApplicationContext(), Principal.class);
+
+
                startActivity(principal);
            }
 
